@@ -1,13 +1,102 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.donat{
+  display:flex;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  /* flex-direction: row; */
+
+  
+  
+}
+.leftright{
+  padding: 10px 20px;
+}
+.left{
+  font-size: 20px;
+  font-weight: 600;
+}
+.right{
+  color: (0,0,0,0.05);
+  opacity: 1;
+}
+.productchart{
+  display: flex;
+  /* justify-content: space-between; */
+}
+.chart{
+  /* box-shadow: #61dafb; */
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 5px 15px;
+  border-radius: 20px;
+  width: 100%;
+  height: 500px;
+  padding: 0 50px;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.chartJs
+{
+  width:700px;
+  /* height: 500px; */
+}
+.donutChart{
+  width: 400px;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width:836px) {
+  .chartJs
+  {
+    width:500px;
+    /* height: 500px; */
+  }
+  .chart{
+
+   padding: 20px;
+  }
+  .donutChart{
+    width: 300px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .chartJs
+  {
+    width:100%;
+    /* height: 500px; */
+  }
 }
